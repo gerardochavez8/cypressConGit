@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
+import materialize from 'materialize-css'
+import 'materialize-css/dist/css/materialize.min.css'
 
-function App() {
-  return (
-    <div>
-      <form>
+import Records from './components/Records'
 
-      </form>
-    </div>
-  );
+class App extends Component {
+    componentDidMount = () => {
+        materialize.AutoInit();
+    }
+
+    render = () => {
+        return(
+            <div className="container">
+                <Records />
+            </div>
+        )
+    }
 }
 
 export default App;
