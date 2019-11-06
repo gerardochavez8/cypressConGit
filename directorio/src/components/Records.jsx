@@ -8,11 +8,7 @@ class Records extends Component {
         telefono: "",
         records: []
     }
-
-    // addRecord = () => {
-    //     console.log('Nuevo registro');
-    // }
-
+    
     render() {
         return(
             <div>
@@ -40,8 +36,16 @@ class Records extends Component {
                             <td>Colima, Colima</td>
                             <td>3121602030</td>
                             <td>
-                                <button className="btn btn-small waves-effect">Editar</button>
-                                <button className="btn btn-small waves-effect">Eliminar</button>
+                                <button
+                                    id="btn-update" 
+                                    className="btn btn-small waves-effect">
+                                        Editar
+                                </button>
+                                <button
+                                    id="btn-delete"
+                                    className="btn btn-small waves-effect">
+                                        Eliminar
+                                </button>
                             </td>
                         </tr>
                     </tbody>
@@ -63,7 +67,7 @@ class Records extends Component {
                                 <label htmlFor="telefono">Teléfono</label>
                             </div>
                             <button
-                                id="btn-agregar"
+                                id="btn-submit"
                                 className="btn waves-effect waves-light"
                                 type="submit">
                                     Agregar
